@@ -1,5 +1,5 @@
 
-import React from 'react';
+import BrandText from './BrandText';
 
 interface PitchProps {
   t: any;
@@ -15,7 +15,7 @@ const Pitch: React.FC<PitchProps> = ({ t }) => {
         <div className="text-3xl md:text-5xl font-semibold leading-snug">
           {t.text.split('. ').map((part: string, i: number) => (
             <span key={i} className={i % 2 === 0 ? 'text-white' : 'text-white/40'}>
-              {part}{i < t.text.split('. ').length - 1 ? '. ' : ''}
+              <BrandText text={part} />{i < t.text.split('. ').length - 1 ? '. ' : ''}
             </span>
           ))}
         </div>

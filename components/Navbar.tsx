@@ -2,6 +2,8 @@
 import React from 'react';
 import { Language } from '../i18n';
 
+import logoImg from '../assets/logo.svg';
+
 interface NavbarProps {
   lang: Language;
   toggleLang: () => void;
@@ -13,8 +15,8 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t }) => {
     <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 pointer-events-none">
       <div className="max-w-7xl mx-auto flex justify-between items-center glass rounded-2xl px-6 py-3 pointer-events-auto shadow-2xl">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg accent-gradient flex items-center justify-center font-bold text-black text-sm">
-            BD
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+            <img src={logoImg} alt="Logo" className="w-full h-full object-cover" />
           </div>
           <span className="font-bold tracking-tight text-lg hidden sm:inline">Benjamin Dietz</span>
         </div>

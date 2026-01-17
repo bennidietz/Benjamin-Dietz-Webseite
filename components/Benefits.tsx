@@ -1,5 +1,5 @@
 
-import React from 'react';
+import BrandText from './BrandText';
 
 interface BenefitsProps {
   t: any;
@@ -23,7 +23,9 @@ const Benefits: React.FC<BenefitsProps> = ({ t }) => {
               {Icons[item.icon]}
             </div>
             <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-            <p className="text-white/50 leading-relaxed">{item.desc}</p>
+            <p className="text-white/50 leading-relaxed">
+              <BrandText text={item.desc} />
+            </p>
           </div>
         ))}
       </div>

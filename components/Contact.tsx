@@ -1,5 +1,5 @@
 
-import React from 'react';
+import BrandText from './BrandText';
 
 interface ContactProps {
   t: any;
@@ -46,7 +46,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
               rel="noopener noreferrer" 
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
-              Agency (21vision)
+              Agency (<BrandText text="21vision" />)
             </a>
           </div>
         </div>

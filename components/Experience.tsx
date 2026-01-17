@@ -1,5 +1,5 @@
 
-import React from 'react';
+import BrandText from './BrandText';
 
 interface ExperienceProps {
   t: any;
@@ -18,7 +18,7 @@ const Experience: React.FC<ExperienceProps> = ({ t }) => {
                  <div>
                     <div className="flex flex-wrap items-center gap-3">
                       <span className={`text-xl md:text-2xl font-bold text-white transition-colors ${item.url ? 'group-hover:text-amber-500' : ''}`}>
-                        {item.company}
+                        <BrandText text={item.company} />
                       </span>
                       {item.isFounder && (
                         <span className="text-[10px] font-bold uppercase tracking-widest bg-amber-500 text-black px-2.5 py-1 rounded-md shadow-lg">
