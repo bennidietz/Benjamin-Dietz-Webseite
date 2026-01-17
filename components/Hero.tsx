@@ -49,6 +49,8 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
               <img 
                 src={mainImg} 
                 alt="Benjamin Dietz"
+                loading="eager"
+                fetchPriority="high"
                 className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-110"
               />
               {/* Gradient Overlay for integration */}
