@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+import mainImg from '../assets/main.jpg';
+
 interface HeroProps {
   t: any;
 }
@@ -45,9 +47,9 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
             
             <div className="relative aspect-[4/5] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden glass border-white/10 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2000&auto=format&fit=crop" 
+                src={mainImg} 
                 alt="Benjamin Dietz"
-                className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-110"
               />
               {/* Gradient Overlay for integration */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#060606]/40 via-transparent to-transparent"></div>
