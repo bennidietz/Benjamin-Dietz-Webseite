@@ -27,6 +27,27 @@ const App: React.FC = () => {
 
   const t = useMemo(() => translations[lang], [lang]);
 
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px 100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [lang]); 
+
   const toggleLang = () => {
     setLang(prev => prev === 'de' ? 'en' : 'de');
   };

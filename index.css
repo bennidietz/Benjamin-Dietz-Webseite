@@ -33,7 +33,35 @@
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .glass {
-    backdrop-filter: blur(8px); /* Reduce blur on mobile for performance */
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Performant Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+
+@media (max-width: 768px) {
+  .reveal {
+    transition-duration: 0.6s; /* Faster on mobile */
+    transform: translateY(20px); /* Smaller movement */
+  }
+  
+  .stagger-1, .stagger-2, .stagger-3 {
+    transition-delay: 50ms; /* Reduced delay on mobile for snappiness */
   }
 }

@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import mainImg from '../assets/main.jpg';
+import mainImg from '../assets/main.webp';
 
 interface HeroProps {
   t: any;
