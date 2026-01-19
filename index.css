@@ -29,22 +29,6 @@
   @apply bg-amber-500 text-black;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-  .glass {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-}
-
-/* Mobile Optimizations */
-@media (max-width: 768px) {
-  .glass {
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-}
-
 .reveal {
   opacity: 1;
   transform: none;
