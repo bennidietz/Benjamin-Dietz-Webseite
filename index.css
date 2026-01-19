@@ -11,9 +11,8 @@
 @layer components {
   .glass {
     @apply bg-white/[0.03] border border-white/[0.08];
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transform: translateZ(0); /* Hardware acceleration */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .gradient-text {
@@ -29,7 +28,4 @@
   @apply bg-amber-500 text-black;
 }
 
-.reveal {
-  opacity: 1;
-  transform: none;
-}
+
