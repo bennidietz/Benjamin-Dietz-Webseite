@@ -19,6 +19,7 @@ const BrandText: React.FC<BrandTextProps> = ({ text }) => {
             <img 
               src={logo21} 
               alt="21vision" 
+              loading="lazy"
               className="inline-block h-[0.9em] w-auto mx-1 align-middle -mt-1" 
             />
           )}

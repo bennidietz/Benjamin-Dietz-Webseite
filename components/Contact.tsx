@@ -22,10 +22,10 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
           <div className="relative z-10">
             <button 
               onClick={handleEmailClick}
-              className="bg-white text-black font-bold px-12 py-6 rounded-2xl text-xl hover:scale-105 transition-transform flex items-center gap-3 mx-auto group shadow-2xl"
+              className="bg-white text-black font-bold px-12 py-6 rounded-2xl text-xl flex items-center gap-3 mx-auto group shadow-2xl"
             >
               {t.button}
-              <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
@@ -36,7 +36,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
               href="https://www.linkedin.com/in/benjamin-dietz/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2 hover:text-white transition-colors"
+              className="flex items-center gap-2 hover:text-white"
             >
               LinkedIn
             </a>
@@ -44,7 +44,7 @@ const Contact: React.FC<ContactProps> = ({ t }) => {
               href="https://21-vision.de" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-2 hover:text-white transition-colors"
+              className="flex items-center gap-2 hover:text-white"
             >
               Agency (<BrandText text="21vision" />)
             </a>

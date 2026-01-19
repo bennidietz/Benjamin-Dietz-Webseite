@@ -51,13 +51,13 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex items-center gap-6">
-              <a href="#" className="group flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
-                <img src={logoImg} alt="Benjamin Dietz" className="w-8 h-8 rounded-lg" />
+              <a href="#" className="group flex items-center gap-3 opacity-40 hover:opacity-100">
+                <img src={logoImg} alt="Benjamin Dietz" className="w-8 h-8 rounded-lg" loading="lazy" />
                 <span className="text-sm font-bold tracking-tight">Benjamin Dietz</span>
               </a>
               <div className="w-px h-8 bg-white/10 hidden md:block"></div>
-              <a href="https://21-vision.de" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 opacity-40 hover:opacity-100 transition-opacity">
-                <img src={logo21} alt="21vision" className="h-6 w-auto" />
+              <a href="https://21-vision.de" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 opacity-40 hover:opacity-100">
+                <img src={logo21} alt="21vision" className="h-6 w-auto" loading="lazy" />
               </a>
             </div>
             <p className="opacity-30 text-xs tracking-wide">© {new Date().getFullYear()} Benjamin Dietz. All rights reserved.</p>
@@ -66,7 +66,7 @@ const App: React.FC = () => {
           <div className="flex items-center gap-8">
             <button 
               onClick={() => setShowImpressum(true)} 
-              className="text-white/40 hover:text-white transition-colors text-sm font-medium"
+              className="text-white/40 hover:text-white text-sm font-medium"
             >
               {t.legal.impressum}
             </button>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
           <div className="glass p-10 md:p-14 rounded-[2.5rem] max-w-2xl w-full relative shadow-2xl">
             <button 
               onClick={() => setShowImpressum(false)}
-              className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+              className="absolute top-6 right-6 text-white/50 hover:text-white"
             >
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
