@@ -22,21 +22,21 @@ const Navbar: React.FC<NavbarProps> = ({ lang, toggleLang, t }) => {
         </div>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/60">
-          <a href="#about" className="hover:text-white transition-colors">{t.about}</a>
-          <a href="#benefits" className="hover:text-white transition-colors">{t.benefits}</a>
-          <a href="#experience" className="hover:text-white transition-colors">{t.experience}</a>
+          <a href="#about" className="hover:text-white">{t.about}</a>
+          <a href="#benefits" className="hover:text-white">{t.benefits}</a>
+          <a href="#experience" className="hover:text-white">{t.experience}</a>
         </div>
 
         <div className="flex items-center gap-4">
           <button 
             onClick={toggleLang}
-            className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 hover:border-white/30 transition-all"
+            className="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-white/10 hover:border-white/30"
           >
             {lang === 'de' ? 'EN' : 'DE'}
           </button>
           <a 
             href="#contact" 
-            className="accent-gradient text-black text-sm font-bold px-5 py-2 rounded-xl hover:scale-105 transition-transform"
+            className="accent-gradient text-black text-sm font-bold px-5 py-2 rounded-xl"
           >
             {t.contact}
           </a>

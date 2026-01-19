@@ -7,20 +7,20 @@ interface SkillsProps {
 
 const Skills: React.FC<SkillsProps> = ({ t }) => {
   return (
-    <section className="scroll-mt-32 reveal">
+    <section className="scroll-mt-32">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-        <div className="reveal">
+        <div>
           <h2 className="text-4xl font-bold mb-14">{t.title}</h2>
           <div className="space-y-12">
             {t.categories.map((cat: any, i: number) => (
-              <div key={i} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
+              <div key={i}>
                 <div className="flex justify-between mb-4 text-base font-bold tracking-tight uppercase">
                   <span className="text-white/80">{cat.name}</span>
                   <span className="text-amber-500 tracking-widest">{cat.level/10}/10</span>
                 </div>
                 <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                   <div 
-                    className="h-full accent-gradient transition-all duration-1000 ease-out"
+                    className="h-full accent-gradient"
                     style={{ width: `${cat.level}%` }}
                   ></div>
                 </div>
@@ -29,11 +29,11 @@ const Skills: React.FC<SkillsProps> = ({ t }) => {
           </div>
         </div>
         
-        <div className="flex flex-col justify-center reveal stagger-2">
+        <div className="flex flex-col justify-center">
           <h2 className="text-2xl font-bold mb-10 opacity-40 uppercase tracking-[0.2em] text-sm">Integrated Tech Stack</h2>
           <div className="flex flex-wrap gap-3">
             {t.tags.map((tag: string, i: number) => (
-              <span key={i} className="px-5 py-3 rounded-2xl glass text-xs hover:border-amber-500/50 hover:text-amber-500 transition-all cursor-default font-bold uppercase tracking-widest">
+              <span key={i} className="px-5 py-3 rounded-2xl glass text-xs hover:border-amber-500/50 hover:text-amber-500 cursor-default font-bold uppercase tracking-widest">
                 {tag}
               </span>
             ))}

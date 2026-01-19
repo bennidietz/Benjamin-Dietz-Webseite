@@ -18,8 +18,8 @@ const Benefits: React.FC<BenefitsProps> = ({ t }) => {
       <h2 className="text-4xl md:text-5xl font-bold mb-16">{t.title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {t.items.map((item: any, i: number) => (
-          <div key={i} className="glass p-10 rounded-[2rem] hover:bg-white/5 transition-all group">
-            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6 text-amber-500 group-hover:scale-110 transition-transform">
+          <div key={i} className="glass p-10 rounded-[2rem] hover:bg-white/5 group">
+            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6 text-amber-500">
               {Icons[item.icon]}
             </div>
             <h3 className="text-2xl font-bold mb-3">{item.title}</h3>

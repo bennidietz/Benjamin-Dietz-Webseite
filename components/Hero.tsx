@@ -28,12 +28,12 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
           </p>
 
           <div className="reveal stagger-3 flex flex-col sm:flex-row gap-4 md:gap-6 items-start">
-            <a href="#contact" className="w-full sm:w-auto text-center accent-gradient text-black font-bold px-10 py-4 md:py-5 rounded-2xl text-lg hover:shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1">
+            <a href="#contact" className="w-full sm:w-auto text-center accent-gradient text-black font-bold px-10 py-4 md:py-5 rounded-2xl text-lg hover:shadow-[0_0_40px_rgba(245,158,11,0.2)]">
               {t.cta}
             </a>
-            <a href="#about" className="text-white/40 hover:text-white font-medium flex items-center gap-2 transition-colors py-4 md:py-5 px-4 group">
+            <a href="#about" className="text-white/40 hover:text-white font-medium flex items-center gap-2 py-4 md:py-5 px-4 group">
               {t.scroll}
-              <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
             </a>
@@ -43,15 +43,14 @@ const Hero: React.FC<HeroProps> = ({ t }) => {
         <div className="order-1 md:order-2 flex justify-center md:justify-end">
           <div className="reveal stagger-1 relative group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px]">
             {/* Decorative elements around image */}
-            <div className="absolute -inset-4 bg-amber-500/10 rounded-[2.5rem] md:rounded-[3rem] blur-2xl group-hover:bg-amber-500/20 transition-all duration-700"></div>
+            <div className="absolute -inset-4 bg-amber-500/10 rounded-[2.5rem] md:rounded-[3rem] blur-2xl group-hover:bg-amber-500/20"></div>
             
             <div className="relative aspect-[4/5] rounded-[2.5rem] md:rounded-[3rem] overflow-hidden glass border-white/10 shadow-2xl">
               <img 
                 src={mainImg} 
                 alt="Benjamin Dietz"
-                loading="eager"
-                fetchPriority="high"
-                className="w-full h-full object-cover transition-all duration-700 scale-105 group-hover:scale-110"
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
               {/* Gradient Overlay for integration */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#060606]/40 via-transparent to-transparent"></div>
